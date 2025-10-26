@@ -1,0 +1,132 @@
+/* 💻 Layout & Background */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* 🕶️ Header */
+h2 {
+  color: #00bcd4;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+/* 🧱 Input & Textarea */
+input, textarea {
+  width: 100%;
+  max-width: 350px;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #555;
+  background-color: #1c1f24;
+  color: #fff;
+  font-size: 16px;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #aaa;
+}
+
+input:focus, textarea:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 8px #00bcd4;
+  outline: none;
+  transform: scale(1.02);
+}
+
+/* 🚀 Button */
+button {
+  width: 100%;
+  max-width: 350px;
+  padding: 12px;
+  background: linear-gradient(45deg, #00bcd4, #0097a7);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 188, 212, 0.3);
+}
+
+button:hover {
+  background: linear-gradient(45deg, #0097a7, #00bcd4);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 188, 212, 0.4);
+}
+
+/* 💬 Status Message */
+#status {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #00e676;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  text-align: center;
+  max-width: 350px;
+  word-wrap: break-word;
+}
+
+/* ⚡ Floating sparks (instead of hearts) */
+@keyframes floatSparks {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-800px) scale(1.5); opacity: 0; }
+}
+
+.spark {
+  position: absolute;
+  bottom: -10px;
+  font-size: 18px;
+  animation: floatSparks 6s linear infinite;
+  color: #00bcd4;
+  opacity: 0.7;
+}
+
+/* 🧍 Footer */
+footer {
+  position: absolute;
+  bottom: 10px;
+  font-size: 13px;
+  color: #999;
+  opacity: 0.8;
+  text-align: center;
+  width: 100%;
+}
+
+/* 📱 Mobile Responsiveness */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+
+  input, textarea, button {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  #status {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  footer {
+    font-size: 12px;
+    bottom: 8px;
+  }
+}
